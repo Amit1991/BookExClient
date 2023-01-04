@@ -5,6 +5,7 @@
   Time: 08:11 pm
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,6 +17,11 @@
       * {
         padding: 10px;
         font-family: 'Vollkorn', serif;
+      }
+      table, td, th {
+
+          border: 1px solid;
+          border-collapse: collapse;
       }
     </style>
 </head>

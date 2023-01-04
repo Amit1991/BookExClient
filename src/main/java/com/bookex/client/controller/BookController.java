@@ -13,6 +13,7 @@ public class BookController {
     @Autowired
     private IBookService bookService;
 
+    @RequestMapping("getAll")
     public String getAllBooks(Model model) {
 
         model.addAttribute("allBooks", bookService.getAllBooks());
