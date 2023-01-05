@@ -40,5 +40,6 @@
             </c:forEach>
         </tbody>
     </table>
+    <a href="addBook"><input type="button" value="Add Book" /></a>
 </body>
 </html>

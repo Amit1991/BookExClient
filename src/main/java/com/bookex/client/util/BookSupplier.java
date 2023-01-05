@@ -9,10 +9,9 @@ import java.util.List;
 import java.util.function.Supplier;
 
 @Component
-public class BookSupplier implements Supplier<List<Book>> {
+public class BookSupplier {
 
-    @Override
-    public List<Book> get() {
+    public static List<Book> get() {
 
         return List.of(
 

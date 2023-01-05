@@ -15,8 +15,31 @@
 </head>
 <body>
     <%--@elvariable id="book" type="com.bookex.client.model.Book"--%>
-    <form:form method="post" action="addBook" modelAttribute="book">
-        <spring:message code="book.id" /><form:input path="id" />
+    <form:form action="addBookPost" modelAttribute="book" >
+        <spring:message code="book.id" />
+        <form:input path="id" />
+        <form:errors path="id" />
+        <br />
+        <spring:message code="book.title" />
+        <form:input path="title" />
+        <form:errors path="title" />
+        <br />
+        <spring:message code="book.isbn10" />
+        <form:input path="isbn10" />
+        <form:errors path="isbn10" />
+        <br />
+        <spring:message code="book.isbn13" /><form:input path="isbn13" />
+        <form:errors path="isbn13" />
+        <br />
+        <spring:message code="book.year" />
+        <form:input path="publishingYear" />
+        <form:errors path="publishingYear" />
+        <br />
+        <spring:message code="book.edition" />
+        <form:input path="edition" />
+        <form:errors path="edition" />
+        <br />
+        <input type="submit" value="Submit"/>
     </form:form>
 </body>
 </html>

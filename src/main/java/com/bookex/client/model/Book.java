@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 import java.time.Year;
 
@@ -13,10 +15,20 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotBlank @NotEmpty @NotNull
+    @Size(min = 10, max = 10, message = "ISBN-10 Must be a 10 character value.")
     private String isbn10;
+    @NotBlank @NotEmpty @NotNull
+    @Size(min = 13, max = 13, message = "ISBN-13 Must be a 13 character value.")
     private String isbn13;
+
+    @NotBlank @NotEmpty @NotNull
     private String title;
+
+    @PastOrPresent(message = "Publishing year can not be a future year.")
     private Year publishingYear;
+
+    @Min(value = 1, message = "Edition cannot be less than 1.")
     private int edition;
 
 

@@ -23,6 +23,13 @@
           border: 1px solid;
           border-collapse: collapse;
       }
+      input {
+          margin: 15px;
+      }
+      a > input[type="button"] {
+          background-color: darkgreen;
+          color: white;
+      }
     </style>
 </head>
 </html>
