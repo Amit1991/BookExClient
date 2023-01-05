@@ -77,6 +77,9 @@ public class Book {
         this.edition = edition;
     }
 
+    public Book() {
+
+    }
     @Override
     public String toString() {
         return "Book{" +
